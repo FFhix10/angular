@@ -41,7 +41,7 @@
   "// 1": "dependencies are used locally and by bazel",
   "dependencies": {
     "@angular-devkit/architect": "0.1100.0-rc.1",
-    "@angular-devkit/build-angular": "0.1100.0-rc.1",
+    "@angular-devkit/build-angular": "0.1100.0",
     "@angular-devkit/build-optimizer": "0.1100.0-rc.1",
     "@angular-devkit/core": "11.0.0-rc.1",
     "@angular-devkit/schematics": "11.0.0-rc.1",
@@ -158,7 +158,7 @@
   },
   "// 2": "devDependencies are not used under Bazel. Many can be removed after test.sh is deleted.",
   "devDependencies": {
-    "@angular/cli": "11.0.0-rc.1",
+    "@angular/cli": "11.0.0",
     "@bazel/bazelisk": "^1.4.0",
     "@bazel/buildifier": "^0.29.0",
     "@bazel/ibazel": "^0.12.3",
