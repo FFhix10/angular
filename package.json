@@ -36,12 +36,14 @@
     "ts-circular-deps:check": "yarn -s ng-dev ts-circular-deps check --config ./packages/circular-deps-test.conf.js",
     "ts-circular-deps:approve": "yarn -s ng-dev ts-circular-deps approve --config ./packages/circular-deps-test.conf.js",
     "ng-dev": "node dev-infra/ng-dev",
-    "ng-dev:dev": "ts-node --transpile-only -- dev-infra/cli.ts"
+    "ng-dev:dev": "ts-node --transpile-only -- dev-infra/cli.ts",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "// 1": "dependencies are used locally and by bazel",
   "dependencies": {
     "@angular-devkit/architect": "0.1100.0-rc.1",
-    "@angular-devkit/build-angular": "0.1100.0-rc.1",
+    "@angular-devkit/build-angular": "0.1100.0",
     "@angular-devkit/build-optimizer": "0.1100.0-rc.1",
     "@angular-devkit/core": "11.0.0-rc.1",
     "@angular-devkit/schematics": "11.0.0-rc.1",
@@ -154,11 +156,12 @@
     "typescript": "~4.1.2",
     "xhr2": "0.2.0",
     "yaml": "^1.10.0",
-    "yargs": "^16.1.1"
+    "yargs": "^16.1.1",
+    "@snyk/protect": "latest"
   },
   "// 2": "devDependencies are not used under Bazel. Many can be removed after test.sh is deleted.",
   "devDependencies": {
-    "@angular/cli": "11.0.0-rc.1",
+    "@angular/cli": "11.0.0",
     "@bazel/bazelisk": "^1.4.0",
     "@bazel/buildifier": "^0.29.0",
     "@bazel/ibazel": "^0.12.3",
@@ -210,5 +213,6 @@
     "**/graceful-fs": "4.2.2",
     "**/webdriver-manager": "12.1.7"
   },
-  "cldr-data-coverage": "full"
+  "cldr-data-coverage": "full",
+  "snyk": true
 }
